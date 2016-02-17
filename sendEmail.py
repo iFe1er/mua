@@ -7,7 +7,9 @@ receiver='sysu_public@163.com'
 subject='from ECS'
 smtpserver='smpt.163.com'
 username='sysu_public@163.com'
-password='laqyjovmtuozeznq'
+
+f=open('/root/mua/mail_password','r')
+password=f.read().split('\n')[0]
 
 
 
