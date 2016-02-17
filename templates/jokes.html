@@ -1,0 +1,36 @@
+{% extends "model.html" %}
+
+{%block words%}
+<h2>小麦的冷笑话</h2>
+{% for content in contents %}
+<div class="col-md-6 about-right">
+  <hr />
+  <br/>
+    
+      <div class="border"></div>
+      
+      <span class="para"><p><b><big>{{content}}</big></b></span></p>
+      </div>
+
+    <div class="clearfix"></div>
+    <br/>
+    <div class="col-md-3 about-right">
+       <button class="btn btn-success btn-xs" type="button">顶起来</button>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <button class="btn btn-danger btn-xs" type="button">踩下去</button>
+    </div>
+
+<hr />
+{%endfor%}
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			 <br/><br/>
+			 <p>
+			 <button class="btn btn-info btn-large" type="button" onclick="window.open('/jokes')">更多冷笑话</button>
+			</p>
+		</div>
+	</div>
+</div>
+{%endblock%}
+

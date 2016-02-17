@@ -1,0 +1,77 @@
+{% extends "model.html" %}
+{%block below%}
+
+
+
+<!-- contact-us -->
+<div id="contact-us" class="contact-us">
+	<div class="container">
+        {% if drop_course!= 'omit' %}
+            <div class="contact-info">
+            <h1>你已确认选择。一旦您要抢选的课程{{select_course}}有空位，将会退选课程编号{{drop_course}},然后进行抢课，刷课频率为8秒，刷课时间直到你自行登录为止。</h1>
+            {% else %}
+            <h1>你已确认选择。一旦您要抢选的课程{{select_course}}有空位，将会立刻进行抢课。刷课频率为8秒，刷课时间直到你自行登录为止。</h1>
+            {% endif %}
+
+            <br/><hr/>
+
+            <p><h2>扫描下方二维码，关注后输入学号，第一时间查询后台刷课情况。<br />请勿在刷课中登陆选课系统，如果您手动登陆，查询状态将变成【失败】，此时后台抢课失效，需要您重新登陆本系统进行抢课~</h2></p>
+            </div>
+        <div align="center">
+            <img src="/static/img/wechat.jpg" />
+        </div>
+        <hr/><br/>
+		<div class="contact-info">
+			<h2>CONTACT US</h2>
+			<p>Mua website is under conception. If you have any FUN idea, or would like to work together, please contact us by the method below as soon as possible.</p>
+		</div>
+		<div class="contact-grids">
+			<div class="col-md-6 contact-left">
+				<h2>CONTACT INFO</h2>
+				<div class="border"></div>
+				<p>Mua网站目前正处于构思当中，目标是做一个大家喜欢的网站。网站内容将会但不限于包括匿名树洞、微博段子、微公益、高校二手交易、匿名社交、选课抢课系统、学校/学院最新资讯等。亲爱的你，如果有任何想法(ideas)与建议(suggestions)，或者您也有兴趣一同合作建设MUA社区，都可以按下面方式联系我们。我们收到消息后，会尽快与你联系。让我们携手共进，建设一个让大家喜欢和爱用的综合网站平台。</p>
+				<h3>Address</h3>
+				<b>
+				<ul>
+					<li>中山大学东校区-数据科学与计算机学院</li>
+					<li>广东省广州市广州大学城外环东路132号</li>
+					<li>Tel: 18819253373</li>
+					<li>Mail: 1341414814@qq.com</li>
+				</ul>
+				</b>
+			</div>
+			<div class="col-md-6 contact-right">
+				<form action='/submit_contact' method='POST'>
+					<input type="text" placeholder="Name..." name='name' required>
+					<input type="text" placeholder="E-Mail..." name='email' required>
+					<textarea placeholder="Subject..." name='subject' required></textarea>
+					<textarea class="text" placeholder="Message..." name='message'required></textarea>
+					<input type="submit" value="SUBMIT">
+				</form>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="contact-grids">
+			<div class="col-md-12 contact-right">
+				&nbsp;
+				  {% if get_flashed_messages() %}
+				  <div class="container-fluid">
+				    <div class="row-fluid">
+				      <div class="span12">
+				        <div class="alert alert-info">
+				           <button type="button" class="close" data-dismiss="alert">×</button>
+				          <h4>
+				            提示：
+				          </h4> <strong>{{get_flashed_messages()[0]}}</strong>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				  </div>
+				  {%endif%}
+				</div>
+	</div>
+</div>
+<!-- //contact-us -->
+<!-- footer -->
+{%endblock%}

@@ -1,0 +1,83 @@
+{% extends "model.html" %}
+<!-- bbs mainpage-->
+
+{%block below%}
+<!-- nothing -->
+{%endblock%}
+
+{%block textarea%}
+  <form method='POST' action='/post'>
+  <fieldset><legend contenteditable="false">&nbsp;这里是课书的吐槽匿名树洞<img src="http://img.article.pchome.net/00/34/03/96/pic_lib/s960x639/hr-sandeep-singh-01s960x639.jpg" width='150'/></legend><p> <label contenteditable="false">&nbsp;&nbsp;&nbsp;&nbsp;昵称：&nbsp;</label>
+
+  <input placeholder="nickname" type="text" vk_15d56="subscribed" name='nickname'><br/>
+  </p><p>
+  <label contenteditable="false">&nbsp;&nbsp;&nbsp;&nbsp;留言：</label>
+  <div style="padding-left:63px">
+  <textarea class="form-control" cols="70" rows="15" style="width: 295px; height: 150px;" name='message' placeholder='Leave your message here'></textarea></br>
+  </div>
+  </p>
+  <div style="padding-left:30px">
+  <button class="btn btn-info btn-lg" contenteditable="true" type="submit">提交</button></fieldset>
+  &nbsp;&nbsp;&nbsp;
+  {% if get_flashed_messages() %}
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="alert alert-info">
+           <button type="button" class="close" data-dismiss="alert">×</button>
+          <h4>
+            唉，我说：
+          </h4> <strong>{{get_flashed_messages()[0]}}</strong> 
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  {%endif%}
+  </form>
+  <br/><br/>
+{%endblock%}
+
+{%block words%}
+{% for content in contents %}
+<div class="col-md-6 about-right">
+  <hr />
+  <br/>
+    <h2>【{{content.id}}楼】&nbsp;&nbsp;昵称:&nbsp;{{content.nickname}}</h2>
+      <div class="border"></div>
+      
+      <span class="para"><p><b><big>{{content.content}}</big></b></span></p>
+      </div>
+
+    <div class="clearfix"></div>
+    <br/>
+    <div class="col-md-3 about-right">
+       <button class="btn btn-success btn-xs" type="button">顶起来</button>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <button class="btn btn-danger btn-xs" type="button">踩下去</button>
+    </div>
+
+<hr />
+{%endfor%}
+{%endblock%}
+
+
+{%block pages%}
+<hr/>
+<ul class="pagination">
+  <li><a href="/page/
+    {%if pagenumber >= 1%}
+    {{(pagenumber-1)|string}}
+    {%else%}
+    {{0|string}}
+    {%endif%}
+    "
+    >&laquo;</a></li>
+  <li><a href="/page/1">1</a></li>
+  <li><a href="/page/2">2</a></li>
+  <li><a href="/page/3">3</a></li>
+  <li><a href="/page/4">4</a></li>
+  <li><a href="/page/5">5</a></li>
+  <li><a href="/page/{{(pagenumber+1)|string}}">&raquo;</a></li>
+</ul>
+{%endblock%}

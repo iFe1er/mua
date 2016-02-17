@@ -1,0 +1,13 @@
+{% extends "model.html" %}
+{%block below%}
+
+{% if drop_course != 'omit' %}
+<p><h1>你将要退选课程编号{{drop_course}}, 抢选课程编号{{select_course}}</h1></p>
+{% else %}
+<p><h1>你将要抢选课程编号{{select_course}}</h1></p>
+{% endif %}
+
+<h2>确认请点击 <a href="/course/confirm_yes">这里 </a></h2><br/><hr/>
+<h2>否则<a href="/course">点此返回登录页</a></h2>
+
+{%endblock%}

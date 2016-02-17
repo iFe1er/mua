@@ -1,0 +1,60 @@
+{% extends "model.html" %}
+
+{%block below%}
+<!-- contact-us -->
+<div id="contact-us" class="contact-us">
+	<div class="container">
+		<div class="contact-info">
+			<h2>CONTACT US</h2>
+			<p>Mua website is under conception. If you have any FUN idea, or would like to work together, please contact us by the method below as soon as possible.</p>
+		</div>
+		<div class="contact-grids">
+			<div class="col-md-6 contact-left">
+				<h2>CONTACT INFO</h2>
+				<div class="border"></div>
+				<p>Mua网站目前正处于构思当中，目标是做一个大家喜欢的网站。网站内容将会但不限于包括匿名留言板、微博段子、微公益、高校二手交易、匿名社交、选课抢课系统、学校/学院最新资讯等。亲爱的你，如果有任何想法(ideas)与建议(suggestions)，或者您也有兴趣一同合作建设MUA社区，都可以按下面方式联系我们。我们收到消息后，会尽快与你联系。让我们携手共进，建设一个人人都喜欢，人人都爱用的综合网站平台。</p>
+				<h3>Address</h3>
+				<b>
+				<ul>
+					<li>中山大学东校区-数据科学与计算机学院</li>
+					<li>广东省广州市广州大学城外环东路132号</li>
+					<li>Tel: 18819253373</li>
+					<li>Mail: 1341414814@qq.com</li>
+				</ul>
+				</b>
+			</div>
+			<div class="col-md-6 contact-right">
+				<form action='/submit_contact' method='POST'>
+					<input type="text" placeholder="Name..." name='name' required>
+					<input type="text" placeholder="E-Mail..." name='email' required>
+					<textarea placeholder="Subject..." name='subject' required></textarea>
+					<textarea class="text" placeholder="Message..." name='message'required></textarea>
+					<input type="submit" value="SUBMIT">
+				</form>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="contact-grids">
+			<div class="col-md-12 contact-right">
+				&nbsp;
+				  {% if get_flashed_messages() %}
+				  <div class="container-fluid">
+				    <div class="row-fluid">
+				      <div class="span12">
+				        <div class="alert alert-info">
+				           <button type="button" class="close" data-dismiss="alert">×</button>
+				          <h4>
+				            提示：
+				          </h4> <strong>{{get_flashed_messages()[0]}}</strong> 
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				  </div>
+				  {%endif%}
+				</div>
+	</div>
+</div>
+<!-- //contact-us -->
+<!-- footer -->
+{%endblock%}

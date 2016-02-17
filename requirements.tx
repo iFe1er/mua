@@ -1,0 +1,10 @@
+flask
+flask-bootstrap
+gunicorn
+MySQLdb
+SQLAlchemy
+requests
+lxml
+wechat-sdk
+PIL
+pytesser
