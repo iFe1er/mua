@@ -4,7 +4,7 @@ body{
 	}
 /*-- banner --*/
 .banner{
-	background:url("../images/zd.jpg") no-repeat 0px 0px;
+	background:url("../images/bg1.jpg") no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -572,7 +572,7 @@ textarea.text {
 	}
 @media(max-width:1280px){	
 	.banner {
-		background: url("../images/zd.jpg") no-repeat -55px 0px;
+		background: url("../images/bg1.jpg") no-repeat -55px 0px;
 	}
 	.banner-info {
 		left: 18%;
