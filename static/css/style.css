@@ -4,7 +4,7 @@ body{
 	}
 /*-- banner --*/
 .banner{
-	background:url("../images/bg1.jpg") no-repeat 0px 0px;
+	background:url("../img/12.png") no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -572,14 +572,14 @@ textarea.text {
 	}
 @media(max-width:1280px){	
 	.banner {
-		background: url("../images/bg1.jpg") no-repeat -55px 0px;
+		background: url("../img/12.png") no-repeat -55px 0px;
 	}
 	.banner-info {
 		left: 18%;
 	}
 @media(max-width:1024px){
 	.banner {
-		background: url("../images/banner.jpg") no-repeat -170px 0px;
+		background: url("../img/12.png") no-repeat -170px 0px;
 		min-height:525px;
 		}
 	.banner-info {
@@ -680,7 +680,7 @@ textarea.text {
 		}
 
 	.banner {
-		background: url("../images/banner.jpg") no-repeat -292px 0px;
+		background: url("../img/12.png") no-repeat -292px 0px;
 		}
 	.banner-info {
 		left: 0%;
@@ -764,7 +764,7 @@ textarea.text {
 		width:6%;
 		}
 	.banner {
-		background: url("../images/banner.jpg") no-repeat -352px 0px;
+		background: url("../img/12.png") no-repeat -352px 0px;
 		}
 	.banner-info h1 {
 		font-size: 25px;
@@ -878,7 +878,7 @@ textarea.text {
 		top:16%;
 		}
 	.banner {
-		background: url("../images/banner.jpg") no-repeat -441px 0px;
+		background: url("../img/12.png") no-repeat -441px 0px;
 		min-height: 445px;
 		}
 	.banner-info {
@@ -1035,7 +1035,7 @@ textarea.text {
 		padding: 13px 0;
 		}
 	.banner {
-		background: url("../images/banner.jpg") no-repeat -517px 0px;
+		background: url("../img/12.png") no-repeat -517px 0px;
 		min-height: 292px;
 		}
 	.banner-info {
